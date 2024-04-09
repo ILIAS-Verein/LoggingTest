@@ -15,6 +15,14 @@ class ilLoggingTestConfigGUI extends ilPluginConfigGUI
     private \ILIAS\DI\LoggingServices $logger;
     private array $level;
     private ?array $components = null;
+    private ilLanguage $lng;
+    private \ILIAS\UI\Factory $ui_factory;
+    private ilCtrlInterface $ctrl;
+    private \ILIAS\UI\Renderer $renderer;
+    private \Psr\Http\Message\ServerRequestInterface|\Psr\Http\Message\RequestInterface $request;
+    private $component_repo;
+    private ilToolbarGUI $toolbar;
+    private ilLoggingDBSettings $settings;
 
     public function __construct()
     {
