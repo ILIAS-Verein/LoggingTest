@@ -4,7 +4,9 @@
  * Plugin to test the ILIAS logging interface. ilCronHookPlugin is used as a slot here
  * because of the minimum requirements of these plugins.
  */
-class ilLoggingTestPlugin extends ilCronHookPlugin
+use ILIAS\Cron\CronHookPlugin;
+
+class ilLoggingTestPlugin extends CronHookPlugin
 {
     public function getPluginName():string
     {
