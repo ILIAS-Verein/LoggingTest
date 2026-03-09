@@ -5,6 +5,7 @@
  * because of the minimum requirements of these plugins.
  */
 use ILIAS\Cron\CronHookPlugin;
+use ILIAS\Cron\CronJob;
 
 class ilLoggingTestPlugin extends CronHookPlugin
 {
@@ -18,7 +19,7 @@ class ilLoggingTestPlugin extends CronHookPlugin
         return [];
     }
 
-    public function getCronJobInstance($jobId): ilCronJob
+    public function getCronJobInstance($jobId): CronJob
     {
         throw new \LogicException(
             "This plugin does not actually provide any cron jobs."
